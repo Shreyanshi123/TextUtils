@@ -1,0 +1,122 @@
+#h Understanding Jsx
+React has 2 types of components
+Class based and functional based components 
+
+//Jsx
+html embedded in javascript
+as ell as we can write javascript in html also here
+class as classname
+
+
+react prefers  camelcased htmlFor
+// in react for jsx we return only one jsx html 
+not more than one
+
+any element without self closing tag like img hr will result in an error
+ let name="Harry"
+<nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact Us</li>
+        </ul>
+      </nav>
+      <h2>Hello {name}</h2>
+      <div className="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit numquam suscipit labore nesciunt? Hic doloremque magni ex, molestias modi excepturi aliquam, iusto laboriosam placeat accusantium officiis iste obcaecati omnis temporibus nulla reprehenderit consequatur nam? hahah</p>
+      </div>
+      {/* <div className="blank">Jimin</div>
+      <li className="name"></li> */}
+
+#5 Project1- Setup and Adding Bootstrap
+
+// external html ko string jaisa dekhta hai sanitise basically
+npm run build for optimised project build
+for production build
+deploy it to the server make it online
+
+
+#6 Understanding props and prototypes in react
+ props >- properties
+ in function based components we dont need to import react as we dont use react there
+
+
+ // javascript concept 
+ named export and default export
+ module1.js
+
+ const a ="Harry";
+const b ="Rohan"
+const c ="Aakash"
+const d = "priyanka"
+
+
+export default a;
+
+
+export{b,c,d}
+ module2.js /module2.mjs kr do
+ ya phir jaake package .json meh type ko module kr do 
+ import harry from "./module1.js";
+// harry ke jagah koi bhi name rkh skte hai coz by default wo export ho rha hai 
+console.log(harry)
+
+
+// named export hai 
+import {b,c,d} from "./module1.js"
+meh same naam se export and import karna parega 
+
+console.log(b,c,d)
+
+
+// components should always be in captial letters
+props are like ke components hai usme kch pass kar rhe hai r uski value hm decide kar rhe hai
+props read only honi chahiye r usko change nahi karna hai component meh 
+
+
+hook.js:608 Warning: Failed prop type: Invalid prop `about` of type `number` supplied to `Navbar`, expected `string`.
+    at Navbar (http://localhost:3000/main.969eacadbf50372a1f4a.hot-update.js:1239:27)
+    at App 
+
+    Navbar.propTypes = { title: PropTypes.string, about: PropTypes.string };
+
+    phle se specify kar dete hy string chhaiye ki array chahiye
+    baad meh error na aa jaye
+
+
+    // default props in functional based component
+    
+Navbar.defaultProps={
+  title:"Set title here",
+  about:"Set About here
+
+
+}
+// isrequired matlab bhejne hi hia 
+// default hone pe eror nahi ayega
+Navbar.propTypes = { title: PropTypes.string.isRequired, about: PropTypes.string };
+
+#7 Understanding States and Handling Events in REACT+
+
+// state belong to a component
+reacthooks
+ const [text,setText] = useState("Enter Your Text here");
+    console.log(useState("Enter your text 2.0"))
+    text = "hahagsas"
+    not allowed in react
+(2) ['Enter your text 2.0', ƒ]
+0
+: 
+"Enter your text 2.0"
+1
+: 
+ƒ ()
+length
+: 
+2
+[[Prototype]]
+: 
+Array(0)
+
+
+${props.mode==="light"?"dark":"light"}`
